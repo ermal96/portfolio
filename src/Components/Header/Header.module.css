@@ -1,0 +1,47 @@
+/* Header */
+
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+}
+
+
+/* Logo */
+ 
+.Logo {
+    width: 7.5rem;
+}
+.Logo_Container{
+    
+}
+
+
+/* Navigation */
+
+.Menu_Container{
+   
+}
+
+
+.E_Nav{
+    padding: 0rem 3rem;
+    font-weight: 700;
+    font-size: 17px;
+    color: #3c3d3e;
+    text-decoration: none;
+}
+
+/* Social Icons */
+
+.Social_Container{
+    display: flex;
+    width: 15rem;
+    justify-content: space-between;
+}
+
+.Social_Container img {
+    width:2rem;
+}
+

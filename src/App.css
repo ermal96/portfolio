@@ -1,0 +1,63 @@
+:root{
+  --primary-color:#007bff;
+  --secondary-color:#d4d4f9;
+}
+html{
+  font-size:62.5%;
+}
+
+@media(max-width:768px){
+  html{
+    font-size:42.5%;
+  }
+}
+
+*{
+  font-family: 'Inconsolata', monospace;
+}
+body{
+  margin:0;
+  padding: 0;
+  color: #3c3d3e;
+  overflow-x: hidden;
+  font-size:1.5rem;
+}
+
+h1{
+  font-size:5rem;
+}
+h2{
+  font-size:4rem;
+}
+h3{
+  font-size:3rem;
+}
+h4{
+  font-size:2.5rem;
+}
+h5{
+  font-size:2rem;
+}
+h6{
+  font-size:1.8rem;
+}
+
+button{
+  border: none;
+  width: 120px;
+  height: 45px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.E_Big_container {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
