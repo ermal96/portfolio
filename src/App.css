@@ -1,6 +1,6 @@
 :root{
   --primary-color:#007bff;
-  --secondary-color:#d4d4f9;
+  --secondary-color:#01c8da;
 }
 html{
   font-size:62.5%;
@@ -19,7 +19,8 @@ body{
   margin:0;
   padding: 0;
   color: #3c3d3e;
-  overflow-x: hidden;
+  overflow: hidden;
+  min-height: 100vh;
   font-size:1.5rem;
 }
 
@@ -44,19 +45,25 @@ h6{
 
 button{
   border: none;
-  width: 120px;
-  height: 45px;
-  border-radius: 50px;
+  min-width: 12rem;
+  height: 4.5rem;
+  border-radius: 50rem;
   background: var(--primary-color);
   color: #fff;
+  padding: 0rem 2rem;
   font-size: 1.7rem;
 }
 
+.Btn_Secondary{
+  background: var(--secondary-color);
+}
+
 .E_Big_container {
-  min-height: 85vh;
   display: flex;
   align-items: center;
 }
+
+
 
 
 
