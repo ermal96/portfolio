@@ -1,5 +1,8 @@
-/* Banner */
 
-.Banner_Title{
-    /* color:var(--primary-color); */
-}
+@media(min-width:1200px){
+    .col_top{
+      margin-top: -165px !important;
+    }
+  }
+  
+  

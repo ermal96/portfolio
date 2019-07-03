@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 
 export default function Contact() {
     return (
-        <Container maxWidth="lg">
+        <Container className="animate" maxWidth="lg">
             <h1>Contact</h1>
         </Container>
     )
