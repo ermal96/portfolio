@@ -18,7 +18,7 @@ export default function Contact() {
 
           <h2>Contact Me !</h2>
           <div className={classes.contact_box}><a href="tel:0699310392" ><img src={Phone_} Email alt="Phone"/> <h4>0699310392</h4></a></div>
-          <div className={classes.contact_box}><a href="test" ><img src={Location_} Email alt="Location"/> <h4>Rruga Prenkë Jakova, Tiranë 1001</h4></a></div>
+          <div className={classes.contact_box}><a href="https://www.google.com/maps/place/Tirana" ><img src={Location_} Email alt="Location"/> <h4>Tiranë</h4></a></div>
           <div className={classes.contact_box}><a href="mailto:ermalvrapi18@gmail.com" ><img src={Email_} Email alt="Email"/> <h4>Email</h4></a></div>
           <div className={classes.contact_box}><a href="https://www.linkedin.com/in/ermal-vrapi-1a36a9167/" ><img src={Linkedin_} Email alt="Linkedin"/> <h4>Linkedin</h4></a></div>
           <div className={classes.contact_box}><a href="https://www.facebook.com/ermalvrapi" ><img src={Facebook_} Email alt="Facebook"/> <h4>Facebook</h4></a></div>

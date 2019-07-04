@@ -14,7 +14,7 @@ export default function Works() {
 
             <Grid key={index} item xs={6} sm={3}>
               <div className={classes.e_box}>
-                <img src={name.img} alt="Img"/>
+                <img src={name.thumb} alt="Img"/>
                 <h5 className={classes.toogle_title}><a target="_blank" rel="noopener noreferrer" href={name.img}>{name.title}</a></h5>
               </div>
             </Grid>
