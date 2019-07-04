@@ -13,10 +13,13 @@ export default function Works() {
           return (
 
             <Grid key={index} item xs={6} sm={3}>
+               <a target="_blank" rel="noopener noreferrer" href={name.img}>
               <div className={classes.e_box}>
                 <img src={name.thumb} alt="Img"/>
-                <h5 className={classes.toogle_title}><a target="_blank" rel="noopener noreferrer" href={name.img}>{name.title}</a></h5>
+                <h5 className={classes.toogle_title}>{name.title}</h5>
+               
               </div>
+              </a>
             </Grid>
 
           );

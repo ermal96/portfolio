@@ -1,9 +1,5 @@
 import React from 'react';
-import Header from "./Components/Header/Header";
-import Home from "./Components/Home/Home";
-import About from "./Components/About/About";
-import Works from "./Components/Works/Works";
-import Contact from "./Components/Contact/Contact";
+import {Header, Home, About, Works, Contact } from "./Components/index";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 export default function App() {
