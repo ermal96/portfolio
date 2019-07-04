@@ -1,11 +1,17 @@
-import Fd_auto from "./Assets/Works/fd_auto.jpg";
-import Dxm from "./Assets/Works/dxm_Italia.jpg";
-import B_papper from "./Assets/Works/b_paper_Italia.jpg";
-import Natura_spa from "./Assets/Works/naturaspa.jpg";
-import Tippografia from "./Assets/Works/tipografiaruffo.jpg";
-import Disinfestazione from "./Assets/Works/mr_disinfestazione.jpg";
-import Luxury_homes from "./Assets/Works/luxuryhomes.jpg";
-import Nuova_scn from "./Assets/Works/nuovascn.jpg";
+import Fd_auto from "./Assets/Works/fd_auto.webp";
+import Dxm from "./Assets/Works/dxm_Italia.webp";
+import B_papper from "./Assets/Works/b_paper_Italia.webp";
+import Natura_spa from "./Assets/Works/naturaspa.webp";
+import Tippografia from "./Assets/Works/tipografiaruffo.webp";
+import Disinfestazione from "./Assets/Works/mr_disinfestazione.webp";
+import Luxury_homes from "./Assets/Works/luxuryhomes.webp";
+import Nuova_scn from "./Assets/Works/nuovascn.webp";
+import Aeg from "./Assets/Works/aeg.webp";
+import Spektra from "./Assets/Works/spektra.webp";
+import Bottacchiari from "./Assets/Works/bottacchiari.webp";
+import Corradimpianti from "./Assets/Works/corradimpianti.webp";
+
+
 
 const Work = [
 {
@@ -29,6 +35,14 @@ const Work = [
     img:   Tippografia
 },
 {
+    title: "Aeg",
+    img:   Aeg
+},
+{
+    title: "Spektra Srl",
+    img:   Spektra
+},
+{
     title: "Mr Disinfestazione",
     img:   Disinfestazione
 },
@@ -39,7 +53,16 @@ const Work = [
 {
     title: "Nuova Scn",
     img:   Nuova_scn
-}
+},
+{
+    title: "Bottacchiari",
+    img:   Bottacchiari
+},
+{
+    title: "Corradimpianti",
+    img:   Corradimpianti
+},
+
 ];
  
 export {Work};

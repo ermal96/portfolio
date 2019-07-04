@@ -2,87 +2,85 @@
   --primary-color:#007bff;
   --secondary-color:#01c8da;
 }
-html{
-  font-size:62.5%;
-}
 
+
+
+
+*{font-family: 'Inconsolata', monospace;}
+
+html{font-size:62.5%;}
 @media(max-width:768px){
-  html{
-    font-size:42.5%;
-  }
+html{font-size:42.5%;}
 }
 
-*{
+h1.no_script {
+  color: #007bff;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: 'Inconsolata', monospace;
 }
 body{
   margin:0;
   padding: 0;
   color: #3c3d3e;
-  overflow: hidden;
+  overflow-x: hidden;
   min-height: 100vh;
   font-size:1.5rem;
 }
 
-h1{
-  font-size:5rem;
+h1{font-size:5rem;  }
+h2{font-size:4rem;  }
+h3{font-size:3rem;  }
+h4{font-size:2.5rem;}
+h5{font-size:2rem;  }
+h6{font-size:1.8rem;}
+
+
+.e_big_container {
+  align-items: center;
+  min-height: 75vh;
 }
-h2{
-  font-size:4rem;
-}
-h3{
-  font-size:3rem;
-}
-h4{
-  font-size:2.5rem;
-}
-h5{
-  font-size:2rem;
-}
-h6{
-  font-size:1.8rem;
-}
+
 
 button{
   border: none;
-  min-width: 12rem;
   height: 4.5rem;
   border-radius: 50rem;
   background: var(--primary-color);
   color: #fff;
-  padding: 0rem 2rem;
   font-size: 1.7rem;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 3rem;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-.Btn_Secondary{
-  background: var(--secondary-color);
+.btn_secondary{background: var(--secondary-color);}
+
+.btn_img{
+  display: none;
+  width:25px;
+  margin-left: 10px;
+  margin-right: -10px;
+  animation: animate 0.5s ease-in-out forwards;
 }
+
+button:hover{transition: all 0.8s ease;}
+button:hover .btn_img{display: block;}
+
 button a {
   color: #ffff;
   text-decoration: none;
-}
-.E_Big_container {
   display: flex;
   align-items: center;
-}
-
-
-
-
-@keyframes animate {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-.animate {
+  text-align: center;
   animation: animate 0.5s ease-in-out forwards;
 }
+
+
+
+

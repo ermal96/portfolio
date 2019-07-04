@@ -17,8 +17,8 @@
     object-fit: cover;
     height: 225px;
     object-position: top;
-    border: 1px solid rgba(47, 62, 92, 0.2);
-    box-shadow: 0px 5px 10px rgba(4, 120, 249, 0.3);
+    box-shadow: 0px 5px 15px rgba(4, 120, 249, 0.2);
+    animation: animate 0.5s ease-in-out forwards;
   }
   
   
@@ -43,9 +43,13 @@
     z-index: 1;
     position: absolute;
     top: 32%;
-    color: #fff;
     cursor: pointer;
     
+  }
+
+  .toogle_title a{
+    color: #fff;
+    text-decoration: none;
   }
   
   .e_box:hover .toogle_title{

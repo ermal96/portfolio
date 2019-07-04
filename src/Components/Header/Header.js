@@ -5,19 +5,17 @@ import Menu from "./Menu";
 import Social from "./Social";
 import Container from '@material-ui/core/Container';
 
-
 export default function Header() {
-    return (
-        <React.Fragment>
-           <Container maxWidth="lg">
-            <div className={classes.Header}>
-                    <div className={classes.Logo_Container}><Logo /></div>
-                    <div className={classes.Menu_Container}><Menu /></div>
-                    <div className={classes.Social_Container}><Social /></div>
-            </div>
-            </Container>
-        </React.Fragment>
+  return (
+    <React.Fragment>
+      <Container className="animate" maxWidth="lg">
+        <div className={classes.Header}>
+          <div className={classes.Logo_Container}><Logo/></div>
+          <div className={classes.Menu_Container}><Menu/></div>
+          <div className={classes.Social_Container}><Social/></div>
+        </div>
+      </Container>
+    </React.Fragment>
 
-    )
+  )
 }
-
