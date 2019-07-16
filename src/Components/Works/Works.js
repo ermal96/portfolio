@@ -1,31 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Container from '@material-ui/core/Container';
-import {Work} from "../../WorksConatiner";
 import Grid from "@material-ui/core/Grid";
-import classes from "./Works.module.css";
+//import classes from "./Works.module.css";
+import axios from 'axios';
 
-export default function Works() {
 
+
+
+
+
+export default class Works extends Component {
+
+state = {
+  projects: []
+}
+
+componentDidMount(){
+  axios.get('/projects')
+  .then( res =>  {
+    const projects = res.data.Projects;
+    this.setState({projects})
+    
+  })
+  .catch(error =>  {
+    console.log(error);
+  });
+}
+
+
+render(){
   return (
     <Container style={{marginTop: "50px"}} maxWidth="lg">
       <Grid className="animate" container spacing={3}>
-        {Work.map((name, index) => {
-          return (
-
-            <Grid key={index} item xs={6} sm={3}>
-               <a target="_blank" rel="noopener noreferrer" href={name.img}>
-              <div className={classes.e_box}>
-                <img src={name.thumb} alt="Img"/>
-                <h5 className={classes.toogle_title}>{name.title}</h5>
-               
-              </div>
-              </a>
-            </Grid>
-
-          );
-        })
-}
+      {this.state.projects.map(project => {
+        return(
+          <div key={project._id}>
+          <p>{project.name}</p>
+          <p>{project.description}</p>
+          <img alt={project.name} src={project.projectImage} />
+          </div>
+        )
+      })}
       </Grid>
     </Container>
   )
+}
+  
 }
