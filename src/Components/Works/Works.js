@@ -38,8 +38,7 @@ export default class Works extends Component {
       .get(`/projects/${id}`, {})
       .then(res => {
         const singleProject = res.data.projectImage;
-        this.setState({singleProject , isLoading: false});
-        console.log(singleProject);
+        this.setState({singleProject, isLoadingModal: false});
         this.toggle();
         
       })
@@ -55,7 +54,7 @@ export default class Works extends Component {
       }} maxWidth="lg">
         <h2 style={{
           marginBottom: '30px'
-        }}>Works</h2>
+        }}>My recent works</h2>
         {this.state.isLoading
           ? 'Loading Works ...'
           : null}
@@ -64,9 +63,6 @@ export default class Works extends Component {
           isOpen={this.state.modal}
           toggle={this.toggle}
           className={this.props.className}>
-          {this.state.isLoading
-            ? 'Loading Works ...'
-            : null}
           <p className={classes.e_close_window} onClick={this.toggle}>Close Window</p>
           <img
             className={classes.e_full_project_img}
@@ -84,7 +80,7 @@ export default class Works extends Component {
                 <Grid key={project._id} item sm={3} xs={6}>
                   <div className={classes.e_box}>
                     <h3>{project.name}</h3>
-                    <p>{project.description}</p>
+                    <p className={classes.e_txt}>{project.description}</p>
                     <p onClick={() => this.getProjectsById(project._id)} className={classes.e_view}>View Project</p>
                   </div>
                 </Grid>
