@@ -1,58 +1,104 @@
 
 .e_box{
-    transition: all 0.4s ease;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-  }
-  .e_box:hover{
-    transform: translateY(-10px)
-  }
-  
-  .e_box img{
-    border-radius: 5px;
-    width: 100%;
-    object-fit: cover;
-    height: 225px;
-    object-position: top;
-    box-shadow: 0px 5px 15px rgba(4, 120, 249, 0.2);
-    animation: animate 0.5s ease-in-out forwards;
-  }
-  
-  
-  .e_box::before{
-    transition: all 0.4s ease;
-    content: "";
-  }
-  
-  .e_box:hover::before{
-    position: absolute;
-    top:0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    background: rgba(4, 120, 249, 0.7);
-    border-radius: 5px;
-  }
-  
-  .toogle_title{
-    transition: all 0.4s ease;
-    opacity: 0;
-    z-index: 1;
-    position: absolute;
-    top: 32%;
-    cursor: pointer;
-    color: #fff;
-    
+  animation: animate 0.5s ease-in-out forwards;
+  transition: all 0.4s ease;
+  position: relative;
+  padding: 40px;
+  box-shadow: 5px 0px 25px rgba(218, 218, 218, 0.5);
+  border-radius: 5px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
   }
 
-  .toogle_title a{
-    color: #fff;
-    text-decoration: none;
+  .e_box::before{
+    content: "";
+    width:40%;
+    height:5px;
+    top:0;
+    right: 0;
+    background: #d6e2f0;
+    position:absolute;
+    border-bottom-left-radius: 5px;
+  }
+
+  
+  .e_box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 15px 0;
+    border-radius: 4px;
   }
   
-  .e_box:hover .toogle_title{
-    opacity: 1;
+
+.e_box h3 {
+    margin: 5px 0;
+    max-width: 175px;
+   
+  }
+
+.e_view{
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding-bottom: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+
+  .e_box:hover{
+    transform: translateY(-10px) scale(1.05);
+    background: var(--primary-color);
+
+  }
+  .e_box:hover::before{
+   display: none;
+  }
+
+  .e_box:hover h3, .e_box:hover p{
+    color:#fff;
+  }
+
+  .e_box:hover .e_view::before{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    border-radius: 50px;
+  }
+
+
+  .e_box:hover::after{
+    content: "";
+    width: 70px;
+    height: 70px;
+    bottom: 0;
+    right: 0;
+    background: rgba(241, 241, 241, 0.11);
+    position: absolute;
+    border-top-left-radius: 150px;
+  }
+
+
+
+  .e_modal {
+    border: 2px solid red;
+    padding: 25px;
+    display: none;
+  }
+
+  .e_full_project_img{
+    object-fit: contain;
+    object-position: top;
+  }
+
+  .e_close_window {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 5px 55px;
+    cursor: pointer;
   }
