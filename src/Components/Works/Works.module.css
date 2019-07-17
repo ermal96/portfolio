@@ -14,7 +14,9 @@
   border: 1px solid #ececec;
   }
 
-
+@media(max-width:768px){
+  .e_box  {min-height: 190px;}
+}
   
   .e_box img {
     width: 100%;
