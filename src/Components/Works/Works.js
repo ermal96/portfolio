@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import classes from "./Works.module.css";
 import axios from 'axios';
 import {Modal} from 'reactstrap';
+import Box_back_ from "../../Assets/box_back.svg"
 
 export default class Works extends Component {
 
@@ -40,7 +41,6 @@ export default class Works extends Component {
         const singleProject = res.data.projectImage;
         this.setState({singleProject, isLoadingModal: false});
         this.toggle();
-        
       })
       .catch(error => {
         console.log(error);
@@ -50,11 +50,8 @@ export default class Works extends Component {
   render() {
     return (
       <Container style={{
-        marginTop: "20px"
+        marginTop: "20px", marginBottom: "35px"
       }} maxWidth="lg">
-        <h2 style={{
-          marginBottom: '30px'
-        }}>My recent works</h2>
         {this.state.isLoading
           ? 'Loading Works ...'
           : null}
@@ -78,9 +75,9 @@ export default class Works extends Component {
             .map(project => {
               return (
                 <Grid key={project._id} item sm={3} xs={6}>
-                  <div className={classes.e_box}>
+                  <div style={{backgroundImage: `url(${Box_back_})`}} className={classes.e_box}>
                     <h3>{project.name}</h3>
-                    <p className={classes.e_txt}>{project.description}</p>
+                    {/* <p className={classes.e_txt}>{project.description}</p> */}
                     <p onClick={() => this.getProjectsById(project._id)} className={classes.e_view}>View Project</p>
                   </div>
                 </Grid>

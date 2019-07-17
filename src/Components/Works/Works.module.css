@@ -3,24 +3,17 @@
   animation: animate 0.5s ease-in-out forwards;
   transition: all 0.4s ease;
   position: relative;
-  padding: 40px;
-  box-shadow: 5px 0px 25px rgba(218, 218, 218, 0.5);
+  padding: 30px;
   border-radius: 5px;
-  border-bottom-right-radius: 25px;
   overflow: hidden;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  justify-content: center;
+  border: 1px solid #ececec;
   }
 
-  .e_box::before{
-    content: "";
-    width:40%;
-    height:5px;
-    top:0;
-    right: 0;
-    background: #d6e2f0;
-    position:absolute;
-    border-bottom-left-radius: 5px;
-  }
 
   
   .e_box img {
@@ -40,6 +33,8 @@
   .e_txt{
     color: #616161;
     }
+
+
 .e_view{
   color: var(--primary-color);
   transition: all 0.3s ease;
@@ -47,6 +42,7 @@
   padding-bottom: 5px;
   cursor: pointer;
   position: relative;
+  margin-top: 10px;
 }
 
 
@@ -70,40 +66,24 @@
     position: absolute;
     bottom: -6px;
     left: 0;
-    width: 100%;
+    width: 75px;
     height: 5px;
     background: #fff;
     border-radius: 50px;
   }
 
 
-  .e_box:hover::after{
-    content: "";
-    width: 70px;
-    height: 70px;
-    bottom: 0;
-    right: 0;
-    background: rgba(241, 241, 241, 0.11);
-    position: absolute;
-    border-top-left-radius: 150px;
-  }
-
-
-
-  .e_modal {
-    border: 2px solid red;
-    padding: 25px;
-    display: none;
-  }
 
   .e_full_project_img{
     object-fit: contain;
     object-position: top;
   }
 
-  .e_close_window {
+
+  .e_close_window{
+    margin: 0;
+    padding: 6px 29px;
     background: var(--primary-color);
-    color: #fff;
-    padding: 5px 55px;
+    color: #ffff;
     cursor: pointer;
   }
