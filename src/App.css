@@ -117,7 +117,7 @@ button a {
 
 @media (min-width: 576px){
 .modal-dialog {
-    max-width: 90%;
+    max-width: 1429px;
     margin: 1.75rem auto;
 }
 }
