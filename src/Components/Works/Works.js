@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from "@material-ui/core/Grid";
 import classes from "./Works.module.css";
 import axios from 'axios';
-import {Modal} from 'reactstrap';
+import { Modal } from 'reactstrap';
 import Box_back_ from "../../Assets/box_back.svg"
 
 export default class Works extends Component {
@@ -20,7 +20,7 @@ export default class Works extends Component {
       .get('/projects')
       .then(res => {
         const projects = res.data.Projects;
-        this.setState({projects, isLoading: false})
+        this.setState({ projects, isLoading: false })
       })
       .catch(error => {
         console.log(error);
@@ -39,7 +39,7 @@ export default class Works extends Component {
       .get(`/projects/${id}`, {})
       .then(res => {
         const singleProject = res.data.projectImage;
-        this.setState({singleProject, isLoadingModal: false});
+        this.setState({ singleProject, isLoadingModal: false });
         this.toggle();
       })
       .catch(error => {
@@ -64,7 +64,7 @@ export default class Works extends Component {
           <img
             className={classes.e_full_project_img}
             alt='ProjectImage'
-            src={this.state.singleProject}/>
+            src={this.state.singleProject} />
 
         </Modal>
 
@@ -72,10 +72,11 @@ export default class Works extends Component {
           {this
             .state
             .projects
+            .reverse()
             .map(project => {
               return (
                 <Grid key={project._id} item sm={3} xs={6}>
-                  <div style={{backgroundImage: `url(${Box_back_})`}} className={classes.e_box}>
+                  <div style={{ backgroundImage: `url(${Box_back_})` }} className={classes.e_box}>
                     <h3>{project.name}</h3>
                     {/* <p className={classes.e_txt}>{project.description}</p> */}
                     <p onClick={() => this.getProjectsById(project._id)} className={classes.e_view}>View Project</p>
@@ -84,7 +85,7 @@ export default class Works extends Component {
 
               )
             })
-}
+          }
         </Grid>
       </Container>
     )
