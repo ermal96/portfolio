@@ -5,6 +5,7 @@ import client from '../../Config'
 import WorksList from './WorksList'
 import classes from './Works.module.css';
 
+
 class Works extends Component {
 
   state = {
@@ -38,7 +39,9 @@ class Works extends Component {
       <Container className={classes.e_container} maxWidth="lg">
         {loader}
         <Grid className="animate" container spacing={3}>
+       
           {projects}
+    
         </Grid>
       </Container>
     )
