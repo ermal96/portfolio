@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './Animate.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import axios from 'axios';
-axios.defaults.baseURL = 'https://dev.ermal.website';
 ReactDOM.render(
   <App/>, document.getElementById('root'));
 
