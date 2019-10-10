@@ -8,14 +8,14 @@ import {
   SingleWork,
   NotFound
 } from "./Components/index";
-
+//import back_ from "./Assets/new_back.svg";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 export default function App() {
 
   return (
+<div style={{ minHeight: '100vh'}}>
     <Router>
-
       <Header/>
 
       <Switch>
@@ -26,8 +26,8 @@ export default function App() {
         <Route path="/contact" component={Contact}/>
         <Route component={NotFound}/>
       </Switch>
-      
-    </Router>
 
+    </Router>
+    </div>
   );
 }
