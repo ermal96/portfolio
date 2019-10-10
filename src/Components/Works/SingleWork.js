@@ -1,29 +1,31 @@
 import React, {Component} from 'react'
 import client from '../../Config'
-import classes from './Works.module.css';
-import Container from '@material-ui/core/Container';
-import Grid from "@material-ui/core/Grid";
-
+import classes from './Works.module.css'
+import Container from '@material-ui/core/Container'
+import Grid from "@material-ui/core/Grid"
+import Works_ from '../../Assets/works.svg'
+import { IoLogoWordpress, IoLogoCss3, IoIosCart, IoIosBrush, IoIosBrowsers } from 'react-icons/io';
 class SingleWork extends Component {
 
   state = {
-    work: ''
+    work: '',
+    images: []
   }
 
-  componentWillMount() {
-
+  componentDidMount() {
     const {match} = this.props
     client
       .getEntries({content_type: 'works', 'fields.slug': match.params.slug})
       .then((res) => {
-        console.log(res)
-        this.setState({work: res.items[0]})
-        console.log(this.state)
+        this.setState({work: res.items[0], images: res.items[0].fields.img})
+        console.log(this.state.work)
       })
 
   }
 
   render() {
+    const {work, images} = this.state
+
     if (!this.state.work) {
       return (
         <Container className={classes.e_container} maxWidth="lg">
@@ -33,21 +35,40 @@ class SingleWork extends Component {
     }
 
     return (
-      <Container className={classes.e_container} maxWidth="lg">
-        <Grid className="animate" container spacing={3}>
-          <Grid item sm={6} xs={6}>
-            <img
-              style={{
-              width: "100%"
-            }}
-              src={this.state.work.fields.img[0].fields.file.url}
-              alt={this.state.work.fields.name}/>
-          </Grid>
+      <Container  className={classes.e_container} maxWidth="lg">
+        <Grid container spacing={3} >
+          <Grid item xs={12} sm={6}>
+            <h4>{work.fields.name}</h4>
+            <div className={classes.e_tech}>
+              <h5>Technologies</h5>
+                {work.fields.css ? <p><IoLogoCss3 /> Css</p>: null}
+                {work.fields.eCommerce ? <p><IoIosCart /> e-Commerce</p>: null}
+                {work.fields.illustrator ? <p><IoIosBrush /> Illustrator</p>: null}
+                {work.fields.photoshop ? <p><IoIosBrowsers /> Photoshop</p>: null}
+                {work.fields.wordpress ? <p><IoLogoWordpress/> Wordpress</p>: null}
+            </div>
+            <button className={classes.e_btn} onClick={() => this.props.history.goBack()}>Go Back</button>
 
-          <Grid item sm={6} xs={6}>
-            <h3>{this.state.work.fields.name}</h3>
           </Grid>
+            <Grid style={{justifyContent:'flex-end', display:'flex'}} item xs={12} sm={6}>
+              <img style={{height: '320px'}} src={Works_} />
+            </Grid>
         </Grid>
+        
+        
+          <Grid className="animate" container spacing={3}>
+            {images.map((img, index) => {
+              return (
+                <Grid key={index} item xs={12} sm={6}>
+                  <img
+                    onClick={() => this.setState({isOpen: true})}
+                    className={classes.e_slingle_img}
+                    src={img.fields.file.url}
+                    alt={work.fields.name}/></Grid>
+              )
+            })}
+
+          </Grid>
       </Container>
     )
   }
