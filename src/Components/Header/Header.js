@@ -7,7 +7,7 @@ import Container from '@material-ui/core/Container';
 
 export default function Header() {
   return (
-    <React.Fragment>
+    <nav>
       <Container className="animate" maxWidth="lg">
         <div className={classes.Header}>
           <div className={classes.Logo_Container}><Logo/></div>
@@ -15,7 +15,7 @@ export default function Header() {
           <div className={classes.Social_Container}><Social/></div>
         </div>
       </Container>
-    </React.Fragment>
+    </nav>
 
   )
 }
