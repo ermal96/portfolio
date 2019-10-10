@@ -9,10 +9,10 @@ class WorksList extends Component {
     const {project} = this.props
     return (
       <Grid  item sm={3} xs={6}>
-          
+        
         <div className={classes.e_box}>
           <h4>{project.fields.name}</h4>
-          <Link to={`works/${project.fields.slug}`}>View Project</Link>
+          <Link className={classes.e_view} to={`works/${project.fields.slug}`}>View Project</Link>
         </div>
        
       </Grid>
