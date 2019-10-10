@@ -10,7 +10,8 @@ class Works extends Component {
 
   state = {
     projects: [],
-    isLoading: true
+    isLoading: true,
+    error:false
   }
 
   componentDidMount() {
@@ -19,9 +20,9 @@ class Works extends Component {
       .getEntries({content_type: 'works'})
       .then((res) => {
         const projects = res.items
-        this.setState({projects, isLoading: false})
+        this.setState({projects, isLoading: false, error:false })
       })
-      .catch(console.error)
+      .catch(this.setState({error:true, isLoading: false}))
   }
 
   render() {
@@ -39,7 +40,8 @@ class Works extends Component {
       <Container className={classes.e_container} maxWidth="lg">
         {loader}
         <Grid className="animate" container spacing={3}>
-       
+         {this.state.error  ? 'Please check your internet conection': null}
+
           {projects}
     
         </Grid>

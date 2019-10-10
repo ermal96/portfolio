@@ -38,7 +38,7 @@ class SingleWork extends Component {
       <Container  className={classes.e_container} maxWidth="lg">
         <Grid container spacing={3} >
           <Grid item xs={12} sm={6}>
-            <h4>{work.fields.name}</h4>
+            <h3>{work.fields.name}</h3>
             <div className={classes.e_tech}>
               <h5>Technologies</h5>
                 {work.fields.css ? <p><IoLogoCss3 /> Css</p>: null}
