@@ -14,7 +14,8 @@
   flex-direction: column;
   min-height: 180px;
   justify-content: center;
-  border: 1px solid var(--primary-color);
+  border: 2px solid #ededed;
+  position:relative
   }
 
 @media(max-width:768px){
@@ -48,6 +49,8 @@
   cursor: pointer;
   position: relative;
   margin-top: 10px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 
@@ -60,7 +63,7 @@
    display: none;
   }
 
-  .e_box:hover h4, .e_box:hover p{
+  .e_box:hover h4, .e_box:hover a{
     color:#fff;
   }
 
@@ -91,4 +94,24 @@
     background: var(--primary-color);
     color: #ffff;
     cursor: pointer;
+  }
+
+  .e_btn{
+    padding: 10px 25px;
+    height: unset;
+    margin-bottom: 4rem;
+
+  }
+
+  .e_slingle_img{
+    width:100%;
+    border: 1px solid #ededed;
+  }
+
+  .e_tech p  {
+    display: flex;
+    align-items: center;
+  }
+  .e_tech p svg {
+    margin-right: 10px;
   }
