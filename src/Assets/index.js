@@ -6,3 +6,4 @@ export {default as  Phone_ }  from "./phone.svg";
 export {default as  Github_ }  from "./github.svg";
 export {default as  Location_ }  from "./location.svg";
 export {default as  Contact_ }  from "./contact.svg";
+export {default as  Works_ }  from "./works.svg";
