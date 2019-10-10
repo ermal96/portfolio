@@ -58,7 +58,7 @@ body{
   color: #3c3d3e;
   overflow-x: hidden;
   min-height: 100vh;
-  font-size:1.5rem;
+  font-size:16px;
 }
 
 h1{font-size:5rem;  }
