@@ -95,15 +95,13 @@ button{
 .btn_secondary{background: var(--secondary-color);}
 
 .btn_img{
-  display: none;
   width:25px;
   margin-left: 10px;
   margin-right: -10px;
   animation: animate 0.5s ease-in-out forwards;
 }
 
-button:hover{transition: all 0.8s ease;}
-button:hover .btn_img{display: block;}
+
 
 button a {
   color: #ffff;
