@@ -14,7 +14,7 @@ export default function Home() {
 
         <Grid item xs={12} sm={6}>
           <h1>Designer,<br/>
-            Front-end Developer</h1>
+            frontEnd Developer</h1>
           <h4>I design and code beautifully<br/>
             simple things, and I love what I do.</h4>
           <button>
