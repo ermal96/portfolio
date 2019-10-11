@@ -57,16 +57,25 @@ class SingleWork extends Component {
         
         
           <Grid className="animate" container spacing={3}>
-            {images.map((img, index) => {
-              return (
-                <Grid key={index} item xs={12} sm={6}>
-                  <img
-                    onClick={() => this.setState({isOpen: true})}
-                    className={classes.e_slingle_img}
-                    src={img.fields.file.url}
-                    alt={work.fields.name}/></Grid>
-              )
-            })}
+            {images.length > 1 ? 
+              
+              images.map((img, index) => {
+                return (
+                  <Grid key={index} item xs={12} sm={6}>
+                    <img
+                      onClick={() => this.setState({isOpen: true})}
+                      className={classes.e_slingle_img}
+                      src={img.fields.file.url}
+                      alt={work.fields.name}/></Grid>
+                )
+              })
+              
+              :  
+              <img
+              className={classes.e_slingle_img}
+              src={images[0].fields.file.url}
+              alt={work.fields.name}/>}
+            
 
           </Grid>
       </Container>
