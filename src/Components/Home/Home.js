@@ -1,10 +1,9 @@
 import React from 'react'
 import Home_ from "../../Assets/home.svg";
-import Reading_ from "../../Assets/reading.svg";
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import {NavLink} from 'react-router-dom';
-
+import {IoIosKeypad} from 'react-icons/io'
 export default function Home() {
   return (
 
@@ -14,12 +13,12 @@ export default function Home() {
 
         <Grid item xs={12} sm={6}>
           <h1>Designer,<br/>
-            frontEnd Developer</h1>
+            FrontEnd Developer</h1>
           <h4>I design and code beautifully<br/>
             simple things, and I love what I do.</h4>
           <button>
-            <NavLink to="/about">Learn More
-              <img className="btn_img" alt="Learn More" src={Reading_}/></NavLink >
+            <NavLink to="/about">Learn More&nbsp;
+              <IoIosKeypad/></NavLink >
           </button>
         </Grid>
 

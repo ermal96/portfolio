@@ -1,9 +1,9 @@
-import React from 'react';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import About_ from "../../Assets/about.svg";
-import CV_ from "../../Assets/cv.pdf";
-import Cv_ from "../../Assets/cv.svg";
+import React from 'react'
+import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import About_ from "../../Assets/about.svg"
+import CV_ from "../../Assets/cv.pdf"
+import {IoIosDownload} from 'react-icons/io'
 export default function About() {
   return (
     <Container className="animate" maxWidth="lg">
@@ -20,7 +20,7 @@ export default function About() {
             <br/>
           </h5>
           <button className="btn_secondary">
-            <a href={CV_} rel="noopener noreferrer" target="_blank">Download CV <img  className="btn_img" alt="Cv" src={Cv_} /></a>
+            <a href={CV_} rel="noopener noreferrer" target="_blank">Download CV&nbsp;<IoIosDownload /></a>
           </button>
         </Grid>
 

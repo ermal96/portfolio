@@ -4,7 +4,7 @@ import classes from './Works.module.css'
 import Container from '@material-ui/core/Container'
 import Grid from "@material-ui/core/Grid"
 import Works_ from '../../Assets/works.svg'
-import { IoLogoWordpress, IoLogoCss3, IoIosCart, IoIosBrush, IoIosBrowsers } from 'react-icons/io';
+import { IoLogoWordpress, IoLogoCss3, IoIosCart, IoIosBrush, IoIosBrowsers, IoIosArrowBack } from 'react-icons/io';
 class SingleWork extends Component {
 
   state = {
@@ -47,11 +47,11 @@ class SingleWork extends Component {
                 {work.fields.photoshop ? <p><IoIosBrowsers /> Photoshop</p>: null}
                 {work.fields.wordpress ? <p><IoLogoWordpress/> Wordpress</p>: null}
             </div>
-            <button className={classes.e_btn} onClick={() => this.props.history.goBack()}>Go Back</button>
+            <button className={classes.e_btn} onClick={() => this.props.history.goBack()}><IoIosArrowBack />  Go Back</button>
 
           </Grid>
             <Grid style={{justifyContent:'flex-end', display:'flex'}} item xs={12} sm={6}>
-              <img style={{height: '320px'}} src={Works_} />
+              <img alt='' style={{height: '320px'}} src={Works_} />
             </Grid>
         </Grid>
         

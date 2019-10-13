@@ -60,7 +60,13 @@
     }
 
 }
-.Social_Container_img{
+.Social_Container_img svg{
     margin-left: 3.5rem;
+    font-size: 14px;
+    background: var(--primary-color);
+    color:#fff;
+    padding: 4px;
+    border-radius: 50px;
+
 }
 

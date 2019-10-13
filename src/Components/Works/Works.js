@@ -5,24 +5,21 @@ import client from '../../Config'
 import WorksList from './WorksList'
 import classes from './Works.module.css';
 
-
 class Works extends Component {
 
   state = {
     projects: [],
-    isLoading: true,
-    error:false
+    isLoading: true
   }
 
   componentDidMount() {
-    console.log(this.props)
     client
       .getEntries({content_type: 'works'})
       .then((res) => {
         const projects = res.items
-        this.setState({projects, isLoading: false, error:false })
+        this.setState({projects, isLoading: false, error: false})
       })
-      .catch(this.setState({error:true, isLoading: false}))
+      .catch(this.setState({error: true, isLoading: false}))
   }
 
   render() {
@@ -32,18 +29,17 @@ class Works extends Component {
       .projects
       .map((project, i) => <WorksList key={i} project={project}/>)
 
-    const loader = this.state.isLoading ? 'Loading Works ...' : null
+    const loader = this.state.isLoading
+      ? 'Loading Works ...'
+      : null
 
-    // Render Data 
+    // Render Data
 
     return (
       <Container className={classes.e_container} maxWidth="lg">
         {loader}
         <Grid className="animate" container spacing={3}>
-         {this.state.error  ? 'Please check your internet conection': null}
-
           {projects}
-    
         </Grid>
       </Container>
     )
