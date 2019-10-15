@@ -5,37 +5,35 @@
 .e_box{
   animation: animate 0.5s ease-in-out forwards;
   transition: all 0.4s ease;
-  position: relative;
-  padding: 30px;
-  border-radius: 5px;
+  padding: 20px;
   overflow: hidden;
   margin-bottom: 5px;
   display: flex;
   flex-direction: column;
-  min-height: 180px;
+  min-height: 225px;
   justify-content: center;
-  border: 2px solid #ededed;
-  position:relative
+  align-items: center;
+  position:relative;
+  box-shadow: 2px 5px 10px whitesmoke;
+  border: 1px solid #ececec;
   }
 
 @media(max-width:768px){
   .e_box  {min-height:150px;}
 }
   
-  .e_box img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin: 15px 0;
-    border-radius: 4px;
-  }
-  
 
 .e_box h4 {
-    margin: 5px 0;
-    max-width: 175px;
-   
-  }
+  text-align: center; 
+  line-height: 30px;
+  margin: 5px 0 15px 0;
+}
+
+.e_box p svg{
+font-size: 35px;
+}
+
+
   .e_txt{
     color: #616161;
     }
@@ -43,58 +41,15 @@
 
 .e_view{
   color: var(--primary-color);
-  transition: all 0.3s ease;
-  display: inline-block;
-  padding-bottom: 5px;
-  cursor: pointer;
-  position: relative;
-  margin-top: 10px;
   text-decoration: none;
-  font-size: 17px;
+  margin-top: 20px;
 }
 
 
-  .e_box:hover{
-    transform: translateY(-10px) scale(1.05);
-    background: var(--primary-color);
-
-  }
-  .e_box:hover::before{
-   display: none;
-  }
-
-  .e_box:hover h4, .e_box:hover a{
-    color:#fff;
-  }
 
  
 
-  .e_box:hover .e_view::before{
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 75px;
-    height: 5px;
-    background: #fff;
-    border-radius: 50px;
-  }
 
-
-
-  .e_full_project_img{
-    object-fit: contain;
-    object-position: top;
-  }
-
-
-  .e_close_window{
-    margin: 0;
-    padding: 6px 29px;
-    background: var(--primary-color);
-    color: #ffff;
-    cursor: pointer;
-  }
 
   .e_btn{
     padding: 10px 25px;
@@ -103,9 +58,10 @@
 
   }
 
-  .e_slingle_img{
+  .e_single_img{
     width:100%;
-    border: 1px solid #ededed;
+    box-shadow: 2px 5px 10px whitesmoke;
+    border: 1px solid #ececec;
   }
 
   .e_tech p  {

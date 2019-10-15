@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
+import './App.scss';
 import './Animate.css';
 import App from './App';
 import ReactGA from 'react-ga';

@@ -43,15 +43,6 @@ html{font-size:62.5%;}
 @media(max-width:768px){
 html{font-size:42.5%;}
 }
-
-h1.no_script {
-  color: #007bff;
-  top: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Inconsolata', monospace;
-}
 body{
   margin:0;
   padding: 0;
@@ -68,12 +59,19 @@ h4{font-size:2.5rem;}
 h5{font-size:2rem;  }
 h6{font-size:1.8rem;}
 
+nav{
+  background-image: linear-gradient(to left top, #ffffff, #fdfdfd, #fbfcfb, #fafafa, #f8f8f8);
+  margin-bottom: 50px;
+}
 
 .e_big_container {
   align-items: center;
   min-height: 75vh;
 }
 
+.primary_color{
+  color: var(--primary-color);
+}
 
 button{
   border: none;
@@ -111,19 +109,4 @@ button a {
   text-align: center;
   animation: animate 0.5s ease-in-out forwards;
 }
-
-
-@media (min-width: 576px){
-.modal-dialog {
-    max-width: 1429px;
-    margin: 1.75rem auto;
-}
-}
-
-.modal-content{
-  height: 800px;
-}
-
-
-
 

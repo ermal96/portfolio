@@ -64,7 +64,7 @@ class SingleWork extends Component {
                   <Grid key={index} item xs={12} sm={6}>
                     <img
                       onClick={() => this.setState({isOpen: true})}
-                      className={classes.e_slingle_img}
+                      className={classes.e_single_img}
                       src={img.fields.file.url}
                       alt={work.fields.name}/></Grid>
                 )
@@ -72,7 +72,7 @@ class SingleWork extends Component {
               
               :  
               <img
-              className={classes.e_slingle_img}
+              className={classes.e_single_img}
               src={images[0].fields.file.url}
               alt={work.fields.name}/>}
             
