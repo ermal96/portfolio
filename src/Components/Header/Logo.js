@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo_ from "../../Assets/logo.svg";
-import classes from './Header.module.css';
+import classes from './Header.module.scss';
 import { NavLink } from 'react-router-dom'; 
 export default function Logo() {
     return (

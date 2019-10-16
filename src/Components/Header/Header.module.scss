@@ -10,12 +10,12 @@
 
 
 /* Logo */
- 
-.Logo {
-    width: 8rem;
-}
+
 .Logo_Container{
     width: 165px;
+    .Logo {
+        width: 8rem;
+    }
 }
 
 
@@ -24,9 +24,10 @@
     .Menu_Container{
      padding-top:15px;
     }
+    .removeLeftSpace{
+        padding-left: 0 !important;
+    }
 }
-
-
 
 .E_Nav{
     padding: 0rem 2rem;
@@ -45,12 +46,13 @@
 .Social_Container{
     display: flex;
     justify-content: space-between;
+    .Social_Container img {
+        width:20px;
+       
+    }
 }
 
-.Social_Container img {
-    width:20px;
-   
-}
+
 @media(max-width:768px){
     .Social_Container {
         padding-top:15px;
@@ -69,4 +71,30 @@
     border-radius: 50px;
 
 }
+
+
+.Menu_Container a{
+    position:relative;
+    transition: all 0.3s ease;
+    &:before{
+        position: absolute;
+        content: "";
+        bottom:-6px;
+        height: 4px;
+        left: 50%;
+        background: var(--secondary-color);
+        display: block;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+    &:hover {
+        &:before{
+            width:4px;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+
 

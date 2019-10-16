@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Header.module.css';
+import classes from './Header.module.scss';
 import {NavLink} from 'react-router-dom';
 
 export default function Menu() {
@@ -7,28 +7,28 @@ export default function Menu() {
 
     <React.Fragment>
 
-      <NavLink
-        style={{
-        paddingLeft: "0"
-      }}
+      <NavLink 
         activeStyle={{
         color: "var(--primary-color)"
       }}
-        className={classes.E_Nav}
+        className={`${classes.E_Nav}  ${classes.removeLeftSpace} `}
         to="/"
         exact>Home</NavLink>
+
       <NavLink
         activeStyle={{
         color: "var(--primary-color)"
       }}
         className={classes.E_Nav}
         to="/about">About</NavLink>
+
       <NavLink
         activeStyle={{
         color: "var(--primary-color)"
       }}
         className={classes.E_Nav}
         to="/works">Works</NavLink>
+        
       <NavLink
         activeStyle={{
         color: "var(--primary-color)"

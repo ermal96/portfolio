@@ -3,10 +3,16 @@
   --secondary-color:#01c8da;
 }
 
-::-webkit-scrollbar {
+$primary: #007bff;
+
+
+
+::-webkit-scrollbar, ::-o-scrollbar, ::-ms-scrollbar, ::-moz-scrollbar {
   width: 0px;
   height: 0px;
 }
+
+
 
 ::-webkit-scrollbar-button:start:decrement,
 ::-webkit-scrollbar-button:end:increment {
@@ -40,8 +46,11 @@
 *{font-family: 'Inconsolata', monospace;}
 a:hover{text-decoration: none; color: unset !important;}
 html{font-size:62.5%;}
+
 @media(max-width:768px){
-html{font-size:42.5%;}
+
+html{font-size:45.5%;}
+
 }
 body{
   margin:0;
