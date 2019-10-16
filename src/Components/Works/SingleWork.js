@@ -54,28 +54,27 @@ class SingleWork extends Component {
               <img alt='' style={{height: '320px'}} src={Works_} />
             </Grid>
         </Grid>
-        
-        
+
+
           <Grid className="animate" container spacing={3}>
-            {images.length > 1 ? 
-              
+            {images.length > 1 ?
+
               images.map((img, index) => {
                 return (
                   <Grid key={index} item xs={12} sm={6}>
                     <img
-                      onClick={() => this.setState({isOpen: true})}
                       className={classes.e_single_img}
                       src={img.fields.file.url}
                       alt={work.fields.name}/></Grid>
                 )
               })
-              
-              :  
+
+              :
               <img
               className={classes.e_single_img}
               src={images[0].fields.file.url}
               alt={work.fields.name}/>}
-            
+
 
           </Grid>
       </Container>
