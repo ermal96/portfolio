@@ -36,7 +36,7 @@ class SingleWork extends Component {
     }
 
     return (
-      <Container  className={classes.e_container} maxWidth="lg">
+      <Container  className={`${classes.e_container} animate`} maxWidth="lg">
         <Grid container spacing={3} >
           <Grid item xs={12} sm={6}>
             <h3>{work.fields.name}</h3>
