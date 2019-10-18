@@ -1,7 +1,7 @@
 /* ------------------------------------------------------ */
 
   .animate {
-    animation: animate 1s ease forwards;
+    animation: animate 1s ease-in forwards;
   }
 
   @keyframes animate {
@@ -13,4 +13,3 @@
       opacity: 1;
     }
   }
-  
