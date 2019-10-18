@@ -4,6 +4,7 @@ import classes from './Works.module.css'
 import Container from '@material-ui/core/Container'
 import Grid from "@material-ui/core/Grid"
 import Works_ from '../../Assets/works.svg'
+import Moment from 'react-moment'
 import { IoLogoWordpress, IoLogoCss3, IoIosCart, IoIosBrush, IoIosBrowsers, IoIosArrowBack } from 'react-icons/io';
 class SingleWork extends Component {
 
@@ -39,6 +40,10 @@ class SingleWork extends Component {
         <Grid container spacing={3} >
           <Grid item xs={12} sm={6}>
             <h3>{work.fields.name}</h3>
+            <p><b>Date Inserted</b></p>
+            <Moment format="YYYY/MM/DD">
+            {work.fields.date}
+            </Moment>
             <div className={classes.e_tech}>
               <h5>Technologies</h5>
                 {work.fields.css ? <p><IoLogoCss3 /> Css</p>: null}
