@@ -1,18 +1,14 @@
-:root{
-  --primary-color:#007bff;
-  --secondary-color:#01c8da;
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #01c8da;
 }
 
 $primary: #007bff;
-
-
 
 ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
 }
-
-
 
 ::-webkit-scrollbar-button:start:decrement,
 ::-webkit-scrollbar-button:end:increment {
@@ -26,50 +22,74 @@ $primary: #007bff;
 
 ::-webkit-scrollbar-track-piece {
   background-color: #eee;
-  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:vertical {
   height: 50px;
   background-color: #007bff1a;
-  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
   width: 50px;
   background-color: #007bff1a;
-  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
-
-
-*{font-family: 'Inconsolata', monospace;}
-a:hover{text-decoration: none; color: unset !important;}
-html{font-size:62.5%;}
-
-@media(max-width:768px){
-
-html{font-size:45.5%;}
-
+* {
+  font-family: "Inconsolata", monospace;
 }
-body{
-  margin:0;
+a:hover {
+  text-decoration: none;
+  color: unset !important;
+}
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 45.5%;
+  }
+}
+body {
+  margin: 0;
   padding: 0;
   color: #3c3d3e;
   overflow-x: hidden;
   min-height: 100vh;
-  font-size:16px;
+  font-size: 16px;
 }
 
-h1{font-size:5rem;  }
-h2{font-size:4rem;  }
-h3{font-size:3rem;  }
-h4{font-size:2.5rem;}
-h5{font-size:2rem;  }
-h6{font-size:1.8rem;}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.5rem;
+}
+h5 {
+  font-size: 2rem;
+}
+h6 {
+  font-size: 1.8rem;
+}
 
-nav{
-  background-image: linear-gradient(to left top, #ffffff, #fdfdfd, #fbfcfb, #fafafa, #f8f8f8);
+nav {
+  background-image: linear-gradient(
+    to left top,
+    #ffffff,
+    #fdfdfd,
+    #fbfcfb,
+    #fafafa,
+    #f8f8f8
+  );
   margin-bottom: 50px;
 }
 
@@ -78,11 +98,11 @@ nav{
   min-height: 75vh;
 }
 
-.primary_color{
+.primary_color {
   color: var(--primary-color);
 }
 
-button{
+button {
   border: none;
   height: 4.5rem;
   border-radius: 50rem;
@@ -99,16 +119,16 @@ button{
   margin-top: 25px;
 }
 
-.btn_secondary{background: var(--secondary-color);}
+.btn_secondary {
+  background: var(--secondary-color);
+}
 
-.btn_img{
-  width:25px;
+.btn_img {
+  width: 25px;
   margin-left: 10px;
   margin-right: -10px;
   animation: animate 0.5s ease-in-out forwards;
 }
-
-
 
 button a {
   color: #ffff;
@@ -118,4 +138,3 @@ button a {
   text-align: center;
   animation: animate 0.5s ease-in-out forwards;
 }
-

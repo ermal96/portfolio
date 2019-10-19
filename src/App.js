@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Header,
   Home,
@@ -8,26 +8,23 @@ import {
   SingleWork,
   NotFound
 } from "./Components/index";
-//import back_ from "./Assets/new_back.svg";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function App() {
-
   return (
-<div style={{ minHeight: '100vh'}}>
-    <Router>
-      <Header/>
+    <div style={{ minHeight: "100vh" }}>
+      <Router>
+        <Header />
 
-      <Switch>
-        <Route path="/" component={Home} exact/>
-        <Route path="/about" component={About}/>
-        <Route path="/works" component={Works} exact/>
-        <Route path="/works/:slug" component={SingleWork}/>
-        <Route path="/contact" component={Contact}/>
-        <Route component={NotFound}/>
-      </Switch>
-
-    </Router>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/about" component={About} />
+          <Route path="/works" component={Works} exact />
+          <Route path="/works/:slug" component={SingleWork} />
+          <Route path="/contact" component={Contact} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
     </div>
   );
 }

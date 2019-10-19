@@ -1,37 +1,32 @@
-import React, {Component} from 'react';
-import Container from '@material-ui/core/Container';
+import React, { Component } from "react";
+import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import client from '../../Config'
-import WorksList from './WorksList'
-import classes from './Works.module.css';
+import client from "../../Configs/Config";
+import WorksList from "./WorksList";
+import classes from "./Works.module.css";
 
 class Works extends Component {
-
   state = {
     projects: [],
     isLoading: true
-  }
+  };
 
   componentDidMount() {
     client
-      .getEntries({content_type: 'works'})
-      .then((res) => {
-        const projects = res.items
-        this.setState({projects, isLoading: false, error: false})
+      .getEntries({ content_type: "works" })
+      .then(res => {
+        const projects = res.items;
+        this.setState({ projects, isLoading: false, error: false });
       })
-      .catch(this.setState({error: true, isLoading: false}))
+      .catch(this.setState({ error: true, isLoading: false }));
   }
 
   render() {
+    const projects = this.state.projects.map((project, i) => (
+      <WorksList key={i} project={project} />
+    ));
 
-    const projects = this
-      .state
-      .projects
-      .map((project, i) => <WorksList key={i} project={project}/>)
-
-    const loader = this.state.isLoading
-      ? 'Loading Works ...'
-      : null
+    const loader = this.state.isLoading ? "Loading Works ..." : null;
 
     // Render Data
 
@@ -42,9 +37,8 @@ class Works extends Component {
           {projects}
         </Grid>
       </Container>
-    )
+    );
   }
-
 }
 
-export default Works
+export default Works;
