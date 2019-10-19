@@ -1,100 +1,89 @@
 /* Header */
 
-.Header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 0;
-    flex-wrap: wrap;
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  flex-wrap: wrap;
 }
-
 
 /* Logo */
 
-.Logo_Container{
-    width: 165px;
-    .Logo {
-        width: 8rem;
-    }
+.Logo_Container {
+  width: 165px;
+  .Logo {
+    width: 8rem;
+  }
 }
-
 
 /* Navigation */
-@media(max-width:768px){
-    .Menu_Container{
-     padding-top:15px;
-    }
-    .removeLeftSpace{
-        padding-left: 0 !important;
-    }
+@media (max-width: 768px) {
+  .Menu_Container {
+    padding-top: 15px;
+  }
+  .removeLeftSpace {
+    padding-left: 0 !important;
+  }
 }
 
-.E_Nav{
-    padding: 0rem 2rem;
-    font-weight: 700;
-    font-size: 20px;
-    color: #3c3d3e;
-    text-decoration: none;
+.E_Nav {
+  padding: 0rem 2rem;
+  font-weight: 700;
+  font-size: 20px;
+  color: #3c3d3e;
+  text-decoration: none;
 }
-.remove_space_left{
-    padding-left:0;
+.remove_space_left {
+  padding-left: 0;
 }
-
 
 /* Social Icons */
 
-.Social_Container{
-    display: flex;
-    justify-content: space-between;
-    .Social_Container img {
-        width:20px;
-       
-    }
+.Social_Container {
+  display: flex;
+  justify-content: space-between;
+  .Social_Container img {
+    width: 20px;
+  }
 }
 
-
-@media(max-width:768px){
-    .Social_Container {
-        padding-top:15px;
-    }
-    .Header{
-        align-items: flex-end;
-    }
-
+@media (max-width: 768px) {
+  .Social_Container {
+    padding-top: 15px;
+  }
+  .Header {
+    align-items: flex-end;
+  }
 }
-.Social_Container_img svg{
-    margin-left: 3.5rem;
-    font-size: 14px;
-    background: var(--primary-color);
-    color:#fff;
-    padding: 4px;
-    border-radius: 50px;
-
+.Social_Container_img svg {
+  margin-left: 3.5rem;
+  font-size: 14px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 4px;
+  border-radius: 50px;
 }
 
-
-.Menu_Container a{
-    position:relative;
+.Menu_Container a {
+  position: relative;
+  transition: all 0.3s ease;
+  &:before {
+    position: absolute;
+    content: "";
+    bottom: -6px;
+    height: 4px;
+    left: 50%;
+    background: var(--secondary-color);
+    display: block;
     transition: all 0.3s ease;
-    &:before{
-        position: absolute;
-        content: "";
-        bottom:-6px;
-        height: 4px;
-        left: 50%;
-        background: var(--secondary-color);
-        display: block;
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-        border-radius: 10px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+  }
+  &:hover {
+    &:before {
+      width: 4px;
+      transition: all 0.3s ease;
     }
-    &:hover {
-        &:before{
-            width:4px;
-            transition: all 0.3s ease;
-        }
-    }
+  }
 }
-
-
-
