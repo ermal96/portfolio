@@ -3,7 +3,6 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { Contact_ } from "../../Assets/index";
 import {
-  IoMdCall,
   IoMdMap,
   IoIosMail,
   IoLogoLinkedin,
@@ -18,12 +17,6 @@ export default function Contact() {
       <Grid container spacing={3} className="e_big_container">
         <Grid item xs={12} sm={6}>
           <h2>Contact Me !</h2>
-          <div className={classes.contact_box}>
-            <a href="tel:0699310392">
-              <IoMdCall />
-              <h4>0699310392</h4>
-            </a>
-          </div>
           <div className={classes.contact_box}>
             <a href="https://www.google.com/maps/place/Tirana">
               <IoMdMap />
