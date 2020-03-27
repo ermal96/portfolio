@@ -3,7 +3,7 @@ import Home_ from "../../Assets/home.svg";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import {NavLink} from "react-router-dom";
-import {IoIosKeypad} from "react-icons/io";
+import {IoIosArrowForward} from "react-icons/io";
 export default function Home() {
     return (
         <Container className="animate" maxWidth="lg">
@@ -13,20 +13,18 @@ export default function Home() {
                     xs={12}
                     sm={6}>
                     <h1>
-                        Hello 
-                        <span style={
-                            {fontSize: "3rem"}
-                        }>&#128075;</span>
+                        Designer,
+                        <br/>
+                        Web Developer
                     </h1>
                     <h4>
-                        I'm Ermal Vrapi A Exprienced Web Developer
-                        <br/>
-                        I'm here to be your partner.
+                        I design and code beautifully<br/>
+                        simple things, and I love what I do.
                     </h4>
                     <button>
                         <NavLink to="/about">
                             Learn More&nbsp;
-                            <IoIosKeypad/>
+                            <IoIosArrowForward/>
                         </NavLink>
                     </button>
                 </Grid>

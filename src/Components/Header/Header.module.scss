@@ -27,6 +27,7 @@
   }
 }
 
+
 .E_Nav {
   padding: 0rem 2rem;
   font-weight: 700;
@@ -66,9 +67,13 @@
 }
 
 .Menu_Container a {
+  
   position: relative;
   transition: all 0.3s ease;
   &:before {
+    @media (max-width:768px) {
+      display: none;
+    }
     position: absolute;
     content: "";
     bottom: -6px;
